@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
@@ -15,10 +16,10 @@
 
 <header class="site-header">
       <div class="container">
-            <img src="/wp-content/themes/jubha-hospital/assets/css/images/logo.png" alt="logo-brand" height="100px">
+            <img src="wp-content/themes/jubha-hospital/assets/images/logo.png" alt="logo-brand" height="100px">
             <div class="cta">
-                  <a href="" style="padding: 10px 20px;"><i class="fa-solid fa-phone"></i> +855 88 798 0828</a>
-                  <a href="" style="padding: 10px 20px;">
+                  <a href="#" class="btn"><i class="fa-solid fa-phone"></i> +855 88 798 0828</a>
+                  <a href="#" class="btn">
                         <i class="fa-solid fa-calendar-check"></i>
                         Book an appointment
                   </a>
@@ -38,4 +39,4 @@
                   </ul>
             </nav>
       </div>
-</header
+</header>

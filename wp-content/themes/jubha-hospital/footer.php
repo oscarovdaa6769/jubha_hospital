@@ -2,7 +2,7 @@
       <div class="footer-container">
 
             <div class="footer-column">
-                  <h4><?php bloginfo('name'); ?></h4>
+                  <img src="wp-content/themes/jubha-hospital/assets/images/logo.png" alt="" height="100px">
                   <p><?php bloginfo('description'); ?></p>
             </div>
 
@@ -25,13 +25,13 @@
             <div class="footer-column">
                   <h4>Social</h4>
                   <div class="social-icon">
-                        <a href="">
-                              <i class="fa-brands fa-facebook"></i>
+                        <a href="" class="fb">
+                              <i class="fa-brands fa-facebook-f"></i>
                         </a>
-                        <a href="">
-                              <i class="fa-brands fa-linkedin"></i>
+                        <a href="" class="li">
+                              <i class="fa-brands fa-linkedin-in"></i>
                         </a>
-                        <a href="">
+                        <a href="" class="ig">
                               <i class="fa-brands fa-instagram"></i>
                         </a>
                   </div>
