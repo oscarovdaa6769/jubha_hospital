@@ -17,11 +17,12 @@
       <div class="container">
             <img src="/wp-content/themes/jubha-hospital/assets/css/images/logo.png" alt="logo-brand" height="100px">
             <div class="cta">
-                  <span href="https://www.youtube.com/">Careers</span>
+                  <a href="" style="padding: 10px 20px;"><i class="fa-solid fa-phone"></i> +855 88 798 0828</a>
                   <a href="" style="padding: 10px 20px;">
+                        <i class="fa-solid fa-calendar-check"></i>
                         Book an appointment
                   </a>
-                  <a href=""><i class="fa-solid fa-user"></i></a>
+                  <button class="btn"><i class="fa-solid fa-user"></i></button>
             </div>
       </div>
       <div class="container">
