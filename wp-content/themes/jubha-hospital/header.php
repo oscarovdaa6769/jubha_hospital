@@ -18,7 +18,7 @@
       <div class="container">
             <img src="wp-content/themes/jubha-hospital/assets/images/logo.png" alt="logo-brand" height="100px">
             <div class="cta">
-                  <a href="#" class="btn"><i class="fa-solid fa-phone"></i> +855 88 798 0828</a>
+                  <a href="#" class="btn"><i class="fa-solid fa-phone"></i> 920033440</a>
                   <a href="#" class="btn">
                         <i class="fa-solid fa-calendar-check"></i>
                         Book an appointment
