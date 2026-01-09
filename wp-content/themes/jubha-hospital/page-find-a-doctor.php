@@ -1,6 +1,5 @@
 <?php get_header(); ?>
-<a href="<?php echo get_home_url(); ?> style.css">
-
+<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
 
 <div class="hero-find-doctor">
   <div class="hero-content">
@@ -9,8 +8,45 @@
   </div>
 </div>
 
-
-
-
+<div class="hero-text">
+  <h3>At Almana Hospital's,</h3>
+  <p>
+    We've proudly served our patients for over 75 years!. As a leader in Saudi 
+    <br> Arabia's healthcare landscape, we're dedicated to providing exceptional 
+    <br> care to our patients.
+  </p>
+  <h3>
+    Find Your Doctor 
+  </h3>
+  <p>
+    Building trusting relationships with our patients is paramount.
+    <br> Explore our
+     extensive network of over 900 doctors and find the one who best 
+     <br>suits your needs.
+     <br>Search now! by location, or specialty.
+  </p>
+</div>
+<div class="search-box">
+    <div cl ass="search-area">
+      <input type="text" placeholder="Type the doctor's name" />
+      <button>
+            Search  
+      </button>
+  </div>
+  <div class="search-filter">
+    <select>
+      <option value="">All Locations</option>
+      <option value="phnom-penh">Phnom Penh</option>
+      <option value="siem-reap">Siem Reap</option>
+      <option value="battambang">Battambang</option>
+    </select>
+      <select>
+      <option value="">Select Spacailzation</option>
+      <option value="phnom-penh">Phnom Penh</option>
+      <option value="siem-reap">Siem Reap</option>
+      <option value="battambang">Battambang</option>
+    </select>
+  </div>
+</div>
 
 <?php get_footer(); ?>
