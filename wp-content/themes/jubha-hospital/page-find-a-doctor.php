@@ -27,15 +27,12 @@
   </p>
 </div>
 <div class="search-box">
-    <div cl ass="search-area">
+    <div class="search-area">
       <input type="text" placeholder="Type the doctor's name" />
-      <button>
-            Search  
-      </button>
   </div>
   <div class="search-filter">
     <select>
-      <option value="">All Locations</option>
+      <option value="">Select Locations</option>
       <option value="phnom-penh">Phnom Penh</option>
       <option value="siem-reap">Siem Reap</option>
       <option value="battambang">Battambang</option>
@@ -46,6 +43,19 @@
       <option value="siem-reap">Siem Reap</option>
       <option value="battambang">Battambang</option>
     </select>
+  </div>
+  <div class="search-area">
+      <button>
+            Search  
+      </button>
+  </div>
+</div>
+<div class="doctor-profile">
+  <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor1.jpg" alt="Doctor">
+
+  <div class="doctor-info">
+    <h3>Dr. John Doe</h3>
+    <p>Cardiologist</p>
   </div>
 </div>
 

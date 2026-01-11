@@ -76,7 +76,7 @@
 }
 .search-box{
   width: 80%;
-  height: 100px;
+  height: 80px;
   background-color: #c9c4c478;
   margin-left: 10%;
   margin-right: 10%;
@@ -120,7 +120,7 @@
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-size: 14px;
+  font-size: 18px;
   width: 250px;
 }
 
@@ -135,4 +135,33 @@
 
 .search-area button:hover {
   background: #0056b3;
+}
+/* <=======================> */
+        /* card-doctor */
+/* <=======================> */
+
+.doctor-profile {
+  position: relative;
+  width: 350px;
+  height: 500px;        /* 🔒 height never changes */
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.doctor-profile img {
+  width: 100%;
+  height: calc(500px - 80px); /* reserve text space */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.doctor-profile img {
+  width: 100%;
+  height: calc(500px - 80px); /* reserve text space */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.doctor-profile:hover img {
+  transform: scale(1.08);
 }
