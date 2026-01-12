@@ -64,11 +64,127 @@
                         <a href="" class="btn">Learn More About Us</a>
                         </div>
                   </div>
+            </div>                                                                                                                                                                                                                                                                                                                                                                         
+      </section>
+      <!-- department -->
+      <section class="department">
+            <div class="container">
+                  <div class="department-grid">
+                        <span>departments</span>
+                        <div class="department-header">
+                              <h2>7 Decades of Exellence</h2>
+                              <a href="" class="btn">All Departments</a>
+                        </div>
+                  </div>
             </div>
-
+            <section class="department-container">
+                  <div class="department-card">
+                        <img src="https://images.unsplash.com/photo-1567607673554-2048def2c6b4?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="department-content">
+                              <i class="fa-solid fa-brain"></i>
+                              <h2>Neurology</h2>
+                        </div>
+                  </div>
+                  <div class="department-card">
+                        <img src="https://images.unsplash.com/photo-1693264882139-6a308957c9ae?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="department-content">
+                              <i class="fa-solid fa-microscope"></i>
+                              <h2>Oncology</h2>
+                        </div>
+                  </div>
+                  <div class="department-card">
+                        <img src="https://images.unsplash.com/photo-1597764690523-15bea4c581c9?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                        <div class="department-content">
+                              <i class="fa-solid fa-bone"></i>
+                              <h2>Orthopedics</h2>
+                        </div>
+                  </div>
+            </section>
+      </section>
+      <!-- media -->
+      <section class="media">
+            <div class="container">
+                  <div class="media-grid">
+                        <span>media update</span>
+                        <div class="media-header">
+                              <h2>Latest Happenings</h2>
+                              <div class="slider-arrow">
+                                    <div class="btn-cc">
+                                          <i class="fa-solid fa-arrow-left"></i>
+                                    </div>
+                                    <div class="btn-cc">
+                                          <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="media-container">
+                              <div class="media-card">
+                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop" alt="">
+                                    <div class="media-content">
+                                          <span>Health Tips</span>
+                                          <h2>Understanding the Importance of Annual Health Checkups</h2>
+                                          <a href="" class="btn">Read Article</a>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+      <!-- branch -->
+      <section class="branch">
+            <div class="container">
+                  <div class="branch-grid">
+                        <span>branches</span>
+                        <div class="branch-header">
+                              <h2>Hospital Locations</h2>
+                              <div class="slider-arrow">
+                                    <div class="btn-cc">
+                                          <i class="fa-solid fa-arrow-left"></i>
+                                    </div>
+                                    <div class="btn-cc">
+                                          <i class="fa-solid fa-arrow-right"></i>
+                                    </div>
+                              </div>
+                        </div>
+                        <div class="branch-container">
+                              <div class="branch-card">
+                                    <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/almana-medical-center-rakah1/l_DSC06581.jpg" alt="">
+                                    <div class="branch-content">
+                                          <h2>AMC Rakkah</h2>
+                                          <div class="hover-actions">
+                                                <a href="" class="action-btn"><i class="fa-solid fa-location-dot"></i> LOCATION MAP</a>
+                                                <a href="" class="action-btn"><i class="fa-solid fa-clock"></i> TIMINGS</a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="branch-card">
+                                    <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/almana-hospital-khobar1/l_DJI_0093_Edit_2_1.png" alt="">
+                                    <div class="branch-content">
+                                          <h2>AGH Khobar</h2>
+                                          <div class="hover-actions">
+                                                <a href="" class="action-btn"><i class="fa-solid fa-location-dot"></i> LOCATION MAP</a>
+                                                <a href="" class="action-btn"><i class="fa-solid fa-clock"></i> TIMINGS</a>
+                                          </div>
+                                    </div>
+                              </div>
+                              <div class="branch-card">
+                                    <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/almana-hospital-dammam/l_00.jpg" alt="">
+                                    <div class="branch-content">
+                                          <h2>AGH Dammam</h2>
+                                          <div class="hover-actions">
+                                                <a href="" class="action-btn"><i class="fa-solid fa-location-dot"></i> LOCATION MAP</a>
+                                                <a href="" class="action-btn"><i class="fa-solid fa-clock"></i> TIMINGS</a>
+                                          </div>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
       </section>
 </main>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/assets/js/main.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/secondswiper.js"></script>
 <?php get_footer(); ?>

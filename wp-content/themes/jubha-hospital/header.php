@@ -23,7 +23,7 @@
                         <i class="fa-solid fa-calendar-check"></i>
                         Book an appointment
                   </a>
-                  <button class="btn"><i class="fa-solid fa-user"></i></button>
+                  <button class="btn-cc"><i class="fa-solid fa-user"></i></button>
             </div>
       </div>
       <div class="container">
