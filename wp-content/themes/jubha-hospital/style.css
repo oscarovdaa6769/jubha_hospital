@@ -1,0 +1,53 @@
+/* Hero container */
+.hero-find-doctor {
+  position: relative;
+  height: 450px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;   /* vertical center */
+}
+
+/* Background (your blur) */
+.hero-find-doctor::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
+    url("https://static.scientificamerican.com/sciam/cache/file/3A236506-E48D-4F38-B1A565180005173E_source.jpg?w=1200");
+  background-size: cover;
+  background-position: top;
+  filter: blur(5px);
+  transform: scale(1.1);
+  z-index: 0;
+}
+
+/* Content on top */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  margin-left: 60px;   /* LEFT spacing */
+  color: white;
+  text-align: left;
+}
+
+/* Title */
+.hero-content h1 {
+  font-size: 48px;
+  margin-top: 250px;
+}
+
+/* Button */
+.hero-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  background-color: #1e88e5;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-btn:hover {
+  background-color: #1565c0;
+}
