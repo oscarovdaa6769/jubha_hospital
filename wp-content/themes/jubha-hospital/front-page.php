@@ -119,11 +119,33 @@
                         </div>
                         <div class="media-container">
                               <div class="media-card">
-                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop" alt="">
+                                    <div class="media-img">
+                                          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop" alt="Medical Technology">
+                                    </div>
                                     <div class="media-content">
                                           <span>Health Tips</span>
                                           <h2>Understanding the Importance of Annual Health Checkups</h2>
                                           <a href="" class="btn">Read Article</a>
+                                    </div>
+                              </div>
+                              <div class="media-card">
+                                    <div class="media-img">
+                                          <img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842?q=80&w=1170&auto=format&fit=crop" alt="Hospital News">
+                                    </div>
+                                    <div class="media-content">
+                                          <span>Latest News</span>
+                                          <h2>Jubha Hospital Opens New Specialized Heart Center</h2>
+                                          <a href="" class="btn">Watch Video</a>
+                                    </div>
+                              </div>
+                              <div class="media-card">
+                                    <div class="media-img">
+                                          <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=1170&auto=format&fit=crop" alt="">
+                                    </div>
+                                    <div class="media-content">
+                                          <span>Media Gallery</span>
+                                          <h2>Take a Virtual Tour of our New Surgical Wing</h2>
+                                          <a href="" class="btn">Watch Now</a>
                                     </div>
                               </div>
                         </div>

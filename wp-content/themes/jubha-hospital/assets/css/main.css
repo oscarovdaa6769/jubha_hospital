@@ -512,23 +512,29 @@ body {
 .media-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-    padding: 40px 0;
+    gap: 10px;
 }
 
 .media-card {
     background: #fff;
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
 }
 
 .media-card:hover img {
     scale: 1.1;
 }
 
-.media-card img {
+.media-img {
+      overflow: hidden;
+}
+
+.media-img img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
     transition: scale 0.3s ease;
 }
