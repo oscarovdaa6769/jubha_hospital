@@ -56,6 +56,8 @@ body {
       padding: 10px 20px;
       color: #fff;
       transition: all 0.3s ease;
+      align-self: flex-start;
+      display: inline-block;
 }
 
 .btn-cc {
@@ -64,6 +66,8 @@ body {
       padding: 10px;
       color: #fff;
       transition: all 0.3s ease;
+      align-self: flex-start;
+      display: inline-block;
 }
 
 .btn:hover,
@@ -72,7 +76,7 @@ body {
       color: var(--text-color);
 }
 
-.site-nav {
+/* .site-nav {
       width: 100%;
 }
 
@@ -94,7 +98,7 @@ body {
 .site-nav ul li a:hover {
       background-color: var(--accent-color);
       color: var(--text-color);
-}
+} */
 
 .site-header.header-scrolled {
     background-color: var(--primary-color);
@@ -482,6 +486,25 @@ body {
       font-size: 2.5rem;
 }
 
+.slider-container {
+      width: 100%;
+      overflow: hidden;
+}
+
+.slider-wrapper {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+}
+
+.slider-card {
+      flex: 0 0 auto;
+}
+
+.slider-arrow {
+      display: flex;
+      gap: 10px;
+}
+
 .media-grid span {
       color: var(--secondary-color);
       font-weight: bold;
@@ -504,15 +527,14 @@ body {
       margin: 20px 0;
 }
 
-.slider-arrow {
+.custom-arrows {
       display: flex;
       gap: 10px;
 }
 
 .media-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .media-card {
@@ -522,6 +544,8 @@ body {
     border: 1px solid #eee;
     display: flex;
     flex-direction: column;
+    height: 100%;
+    transition: transform 0.3s ease;
 }
 
 .media-card:hover img {
@@ -530,17 +554,21 @@ body {
 
 .media-img {
       overflow: hidden;
+      height: 50%;
 }
 
 .media-img img {
     width: 100%;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     transition: scale 0.3s ease;
 }
 
 .media-content {
     padding: 25px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .media-content span {
@@ -553,6 +581,7 @@ body {
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 15px;
+    align-self: flex-start;
 }
 
 .media-content h2 {
@@ -560,80 +589,6 @@ body {
     color: var(--text-color);
     margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .branch-grid span {
       color: var(--secondary-color);
@@ -655,11 +610,6 @@ body {
 .branch-header h2 {
       font-size: 2.5rem;
       margin: 20px 0;
-}
-
-.slider-arrow {
-      display: flex;
-      gap: 10px;
 }
 
 .branch-container {
@@ -731,4 +681,154 @@ body {
     font-weight: bold;
     border-right: 1px solid rgba(255,255,255,0.1);
     color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 1. Reset and Main Nav Styles */
+.site-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Keeps the top-level items horizontal */
+    flex-wrap: wrap; 
+}
+
+.site-nav ul li {
+    position: relative; /* Anchor for the absolute positioned sub-menu */
+}
+
+.site-nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: #ffffff; /* Matching your blue background theme */
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/* 2. Target the WordPress Sub-Menu Class */
+.site-nav ul .sub-menu {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 100%; /* Position right below the parent li */
+    left: 0;
+    background-color: #ffffff; /* White background for the dropdown */
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    flex-direction: column; /* FORCES VERTICAL STACKING */
+    padding: 10px 0;
+    z-index: 100;
+}
+
+/* 3. Show the Sub-Menu on Hover */
+.site-nav ul li:hover > .sub-menu {
+    display: flex; /* Show the sub-menu when parent is hovered */
+}
+
+/* 4. Style Sub-Menu Links */
+.site-nav ul .sub-menu li a {
+    color: #333333; /* Dark text for the white dropdown */
+    padding: 10px 20px;
+    width: 100%;
+}
+
+.site-nav ul .sub-menu li a:hover {
+    background-color: #f1f1f1;
+    color: #004d4d; /* Hospital teal color */
 }

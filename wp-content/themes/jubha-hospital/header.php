@@ -28,15 +28,12 @@
       </div>
       <div class="container">
             <nav class="site-nav">
-                  <ul>
-                        <li><a href="">Find A Doctor</a></li>
-                        <li><a href="">Hospital & Clinic</a></li>
-                        <li><a href="">Patient Information</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Media</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">National Day Offer</a></li>
-                  </ul>
+                  <?php
+                  wp_nav_menu(array(
+                  'theme_location' => 'navigation-menu',
+                  'container' => false
+                  ));
+                  ?>
             </nav>
       </div>
 </header>
