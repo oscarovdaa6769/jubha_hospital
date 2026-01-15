@@ -65,21 +65,21 @@
   <a href="/doctor1/">I</a>
   <a href="/doctor5/">J</a>
   <a href="/doctor6/">K</a>
-  <a href="/doctor/">L</a>
-  <a href="/doctor/">M</a>
-  <a href="/doctor/">N</a>
-  <a href="/doctor/">O</a>
-  <a href="/doctor/">P</a>
-  <a href="/doctor/">Q</a>
-  <a href="/doctor/">R</a>
-  <a href="/doctor/">S</a>
-  <a href="/doctor/">T</a>
-  <a href="/doctor/">U</a>
-  <a href="/doctor/">V</a>
-  <a href="/doctor/">W</a>
-  <a href="/doctor/">X</a>
-  <a href="/doctor-girls/">Girls</a>
-  <a href="">boys</a>
+  <a href="/doctor2/">L</a>
+  <a href="/doctor1/">M</a>
+  <a href="/doctor3/">N</a>
+  <a href="/doctor5/">O</a>
+  <a href="/doctor4/">P</a>
+  <a href="/doctor6/">Q</a>
+  <a href="/doctor1/">R</a>
+  <a href="/doctor4/">S</a>
+  <a href="/doctor2/">T</a>
+  <a href="/doctor5/">U</a>
+  <a href="/doctor6/">V</a>
+  <a href="/doctor1/">W</a>
+  <a href="/doctor3/">X</a>
+  <a href="/doctor5/">Y</a>
+  <a href="/doctor3/">Z</a>
 </div>
 
 <div class="hero-doctor">
