@@ -330,6 +330,10 @@
     margin-bottom: 20px;
 }
 
+.media-content .btn {
+      align-self: flex-start;
+}
+
 /* branch */
 .branch-grid {
       width: 100%;
