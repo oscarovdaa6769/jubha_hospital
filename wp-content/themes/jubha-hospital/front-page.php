@@ -33,7 +33,6 @@
       <section class="statistic">
             <div class="container">
                   <div class="statistic-grid">
-                        
                         <div class="stats-boxes">
                         <div class="statistic-item">
                               <i class="fa-solid fa-user-doctor"></i>
@@ -248,6 +247,26 @@
                                           <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/almana-hospital-jubail/l_jubail_building_rehan.jpg" alt="AGH Jubail">
                                           <div class="branch-content">
                                                 <h2>AGH Jubail</h2>
+                                                <div class="hover-actions">
+                                                      <a href="" class="action-btn"><i class="fa-solid fa-location-dot"></i> LOCATION MAP</a>
+                                                      <a href="" class="action-btn"><i class="fa-solid fa-clock"></i> TIMINGS</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="branch-card slider-card">
+                                          <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/almana-medical-center-jubail/l_AMC_jubail.jpg" alt="AMC Jubail">
+                                          <div class="branch-content">
+                                                <h2>AMC Jubail</h2>
+                                                <div class="hover-actions">
+                                                      <a href="" class="action-btn"><i class="fa-solid fa-location-dot"></i> LOCATION MAP</a>
+                                                      <a href="" class="action-btn"><i class="fa-solid fa-clock"></i> TIMINGS</a>
+                                                </div>
+                                          </div>
+                                    </div>
+                                    <div class="branch-card slider-card">
+                                          <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/almana-hospital-al-ahsa1/l_DSC02925_copy.jpg" alt="AGH Hofuf">
+                                          <div class="branch-content">
+                                                <h2>AGH Hofuf</h2>
                                                 <div class="hover-actions">
                                                       <a href="" class="action-btn"><i class="fa-solid fa-location-dot"></i> LOCATION MAP</a>
                                                       <a href="" class="action-btn"><i class="fa-solid fa-clock"></i> TIMINGS</a>

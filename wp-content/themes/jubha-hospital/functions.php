@@ -18,6 +18,6 @@ function jubha_enqueue_scripts() {
 add_action('wp_enqueue_scripts', 'jubha_enqueue_scripts');
 
 
-register_nav_menus( array(
-    'navigation-menu' => __( 'Primary Navigation', 'textdomain' ),
-) );
+register_nav_menus([
+  'navigation-menu' => __('Navigation Menu', 'theme')
+]);
