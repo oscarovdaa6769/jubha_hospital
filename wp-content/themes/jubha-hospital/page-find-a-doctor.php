@@ -55,16 +55,16 @@
   <p>Find A Doctor:</p>
 
   <a href="/doctor/">A</a>
-  <a href="/doctor/">B</a>
-  <a href="/doctor/">C</a>
-  <a href="/doctor/">D</a>
-  <a href="/doctor/">E</a>
-  <a href="/doctor/">F</a>
-  <a href="/doctor/">G</a>
-  <a href="/doctor/">H</a>
-  <a href="/doctor/">I</a>
-  <a href="/doctor/">J</a>
-  <a href="/doctor/">K</a>
+  <a href="/doctor2/">B</a>
+  <a href="/doctor3/">C</a>
+  <a href="/doctor1/">D</a>
+  <a href="/doctor5/">E</a>
+  <a href="/doctor6/">F</a>
+  <a href="/doctor2/">G</a>
+  <a href="/doctor3/">H</a>
+  <a href="/doctor1/">I</a>
+  <a href="/doctor5/">J</a>
+  <a href="/doctor6/">K</a>
   <a href="/doctor/">L</a>
   <a href="/doctor/">M</a>
   <a href="/doctor/">N</a>
@@ -78,27 +78,27 @@
   <a href="/doctor/">V</a>
   <a href="/doctor/">W</a>
   <a href="/doctor/">X</a>
-  <a href="/doctor/">Y</a>
-  <a href="/doctor/">Z</a>
+  <a href="/doctor-girls/">Girls</a>
+  <a href="">boys</a>
 </div>
 
 <div class="hero-doctor">
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor7.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor17.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor2.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor1.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor3.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor13.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
@@ -116,7 +116,7 @@
 
 <div class="hero-doctor">
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor5.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor15.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
@@ -130,14 +130,14 @@
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor8.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor18.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor1.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor8.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
@@ -148,7 +148,7 @@
 
 <div class="hero-doctor">
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor9.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor19.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
@@ -162,7 +162,7 @@
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor11.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor21.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>

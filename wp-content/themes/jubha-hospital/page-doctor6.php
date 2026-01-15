@@ -141,21 +141,21 @@
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor6.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor8.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
     </div>
   </div>
   <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor1.jpg" alt="Doctor">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor.jpg" alt="Doctor">
     <div class="doctor-info">
       <h3>Dr. John Doe</h3>
       <p>Cardiologist</p>
