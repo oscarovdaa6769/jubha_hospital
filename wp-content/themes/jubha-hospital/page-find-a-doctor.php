@@ -4,7 +4,9 @@
 <div class="hero-find-doctor">
   <div class="hero-content">
     <h1>Find A Doctor</h1>
-    <button class="hero-btn">Find Now</button>
+    <div class="icon">
+      <a href="/home/"><i class="fa-regular fa-house"></a></i>  <p>/ Find A Doctor</p>
+    </div>
   </div>
 </div>
 

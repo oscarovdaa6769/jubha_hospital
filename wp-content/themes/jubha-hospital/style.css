@@ -36,27 +36,25 @@
   font-size: 48px;
   margin-top: 260px;
 }
+.icon{
+  width: 200px;
+  background-color: rgba(0, 164, 163, 0.4);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 8px;
+  border-radius: 5px;
 
-/* Button */
-.hero-btn {
-  padding: 12px 28px;
-  font-size: 16px;
-  background-color: #1e88e5;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  border: double 4px;
-  cursor: pointer;
-  transition: all 0.5s ease-out allow-discrete;
-  transition: 200ms linear 50ms;
-  margin-left: 60px;
-  margin-top: 10px;
 }
-
-.hero-btn:hover {
-  background-color: #1565c0;
-  transform: scale(1.05);
-  border: inset  3px;
+.icon a i{
+  font-size: 17px;
+  margin-left: 10px;
+  color: white;
+}
+.icon p{
+  font-size: 18px;
+  font-family: "Google sans", sans-serif;
+  margin-left: 10px;
 }
 .hero-text{
   width: 700px;
@@ -262,4 +260,56 @@
   color: #ffffff;
   border-radius: 10px;
   text-decoration: none;
+}
+
+/* ================
+      page new
+ */
+
+.search-box input {
+  width: 550px;
+  padding: 13px 15px;
+  border: 1.5px solid #000000;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  font-size: 16px;
+}
+
+/* HOVER ONLY */
+.search-box input:hover {
+  border-color: #0056b3;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+
+
+.search-box select {
+  width: 350px;
+  padding: 13px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
+.search-box select option{
+  height: 50px;
+  border-radius: 25px;
+  background-color: #007bff;
+  color: white;
+}
+
+/* HOVER */
+.search-box select:hover{
+  border-color: #0056b3;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+}
+.news-listing-main-top{
+  width: 80%;
+  margin: auto;
+}
+.picture-top{
+height: 100%;
 }
