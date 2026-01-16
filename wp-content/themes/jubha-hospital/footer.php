@@ -2,7 +2,7 @@
       <div class="footer-container">
 
             <div class="footer-column">
-                  <img src="wp-content/themes/jubha-hospital/assets/images/logo.png" alt="" height="100px">
+                  <img src="/wp-content/themes/jubha-hospital/assets/css/images/logo.png" alt="" height="100px">
                   <p><?php bloginfo('description'); ?></p>
             </div>
 

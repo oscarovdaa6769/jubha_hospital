@@ -11,7 +11,7 @@
   </div>
 </div>
 
-<div class="search-box">
+<div class="search-box1">
   <form action="" method="get">
   <input type="search" name="q" placeholder="Type The Keyword" />
 </form>

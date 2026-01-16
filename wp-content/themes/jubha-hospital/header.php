@@ -16,7 +16,7 @@
 
 <header class="site-header">
       <div class="container">
-            <img src="wp-content/themes/jubha-hospital/assets/images/logo.png" alt="logo-brand" height="100px">
+            <img src="/wp-content/themes/jubha-hospital/assets/css/images/logo.png" alt="logo-brand" height="100px">
             <div class="cta">
                   <a href="#" class="btn"><i class="fa-solid fa-phone"></i> 920033440</a>
                   <a href="<?php echo home_url('/book-now/'); ?>" class="btn">
@@ -30,7 +30,7 @@
             <nav class="site-nav">
                   <?php
                   wp_nav_menu(array(
-                  'theme_location' => 'navigation-menu',
+                  'theme_location' => 'primary-menu',
                   'container' => false
                   ));
                   ?>

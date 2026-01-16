@@ -78,14 +78,24 @@
   background-color: #c9c4c478;
   margin-left: 10%;
   margin-right: 10%;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-top: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-
+.search-box select {
+  width: 250px;
+  padding: 13px 15px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  transition: all 0.3s ease;
+  background: #fff;
+  cursor: pointer;
+  font-size: 16px;
+}
 .search-filter select {
   padding: 8px 25px;
   font-size: 18px;
@@ -111,15 +121,6 @@
   display: flex;
   gap: 10px;
   align-items: center;
-}
-
-.search-area input,
-.search-area select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 18px;
-  width: 250px;
 }
 
 .search-box button {
@@ -265,8 +266,21 @@
 /* ================
       page new
  */
+.search-box1{
+  width: 80%;
+  height: 80px;
+  background-color: #c9c4c478;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 20px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 20px;
 
-.search-box input {
+}
+.search-box1 input {
   width: 550px;
   padding: 13px 15px;
   border: 1.5px solid #000000;
@@ -277,13 +291,13 @@
 }
 
 /* HOVER ONLY */
-.search-box input:hover {
+.search-box1 input:hover {
   border-color: #0056b3;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
 
 
-.search-box select {
+.search-box1 select {
   width: 350px;
   padding: 13px 15px;
   border: 1px solid #ccc;
@@ -294,7 +308,7 @@
   cursor: pointer;
   font-size: 16px;
 }
-.search-box select option{
+.search-box1 select option{
   height: 50px;
   border-radius: 25px;
   background-color: #007bff;
@@ -302,7 +316,7 @@
 }
 
 /* HOVER */
-.search-box select:hover{
+.search-box1 select:hover{
   border-color: #0056b3;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
 }
@@ -312,4 +326,17 @@
 }
 .picture-top{
 height: 100%;
+}
+.search-box1 button {
+  padding: 8px 25px;
+  background: #007bff;
+  font-size: 18px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-box1 button:hover {
+  background: #0056b3;
 }
