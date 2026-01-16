@@ -31,7 +31,7 @@
 }
 
 .overview-section {
-    padding: 80px 0;
+    padding: 80px 0 0;
     background: #ffffff;
 }
 
@@ -60,7 +60,7 @@
 
 .text-block h3 {
     font-size: 2rem;
-      margin: 20px 0;
+    margin: 20px 0;
 }
 
 .text-block p {
@@ -90,39 +90,34 @@
     color: #fff;
 }
 
+.overview-dept-grid span {
+    color: #00d1d1;
+    font-weight: bold;
+    text-transform: uppercase;
+}
 
+.dept-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-.department-showcase {
-    background: linear-gradient(rgba(10, 37, 64, 0.8), rgba(10, 37, 64, 0.8)), url('hospital-building.jpg');
-    background-size: cover;
-    padding: 100px 5%;
-    color: white;
+.dept-header h4 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+    width: 50%;
 }
 
 .dept-carousel {
     display: flex;
     gap: 15px;
-    margin-top: 50px;
 }
 
 .dept-card.glass {
     flex: 1;
-    background: rgba(255, 255, 255, 0.05); /* Very transparent white */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
-    backdrop-filter: blur(5px); /* This creates the glass effect */
-    padding: 40px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
     text-align: center;
     border-radius: 4px;
     transition: all 0.3s ease;
@@ -131,21 +126,61 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
 }
 
 .dept-card.glass:hover, .dept-card.glass.active {
-    background: rgba(0, 209, 209, 0.1); /* Slight teal tint on hover */
-    border: 1px solid rgba(0, 209, 209, 0.5);
-    transform: translateY(-5px);
+    background: #1c4d8d54;
+    border: 1px solid #1c4d8dc1;
 }
 
-.dept-icon {
-    width: 60px;
-    margin-bottom: 20px;
+.icon-circle {
+    font-size: 2rem;
 }
 
-.dept-card h3 {
-    font-size: 1.1rem;
+.overview-statistic {
+    background-color: #f3f3f3;
+    padding: 3rem;
+}
+
+.stat-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.stat-container h5 {
+    font-size: 1.3rem;
     font-weight: 500;
-    line-height: 1.4;
+    color: #333;
+}
+
+.overview-about-grid {
+    display: grid;
+    grid-template-columns: 35% 65%;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+}
+
+.overview-about-text span {
+    color: var(--secondary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.overview-about-text h2 {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.overview-about-text p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.overview-about-img {
+    text-align: left;
 }

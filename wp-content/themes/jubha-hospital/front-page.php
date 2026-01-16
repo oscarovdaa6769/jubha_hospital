@@ -34,28 +34,27 @@
             <div class="container">
                   <div class="statistic-grid">
                         <div class="stats-boxes">
-                        <div class="statistic-item">
-                              <i class="fa-solid fa-user-doctor"></i>
-                              <h4>25+</h4>
-                              <span>Specialist Doctors</span>
+                              <div class="statistic-item">
+                                    <i class="fa-solid fa-user-doctor"></i>
+                                    <h4>25+</h4>
+                                    <span>Specialist Doctors</span>
+                              </div>
+                              <div class="statistic-item">
+                                    <i class="fa-solid fa-hospital-user"></i>
+                                    <h4>10k+</h4>
+                                    <span>Happy Patients</span>
+                              </div>
+                              <div class="statistic-item">
+                                    <i class="fa-solid fa-calendar-check"></i>
+                                    <h4>15+</h4>
+                                    <span>Years Experience</span>
+                              </div>
+                              <div class="statistic-item">
+                                    <i class="fa-solid fa-bed-pulse"></i>
+                                    <h4>50+</h4>
+                                    <span>Modern Rooms</span>
+                              </div>
                         </div>
-                        <div class="statistic-item">
-                              <i class="fa-solid fa-hospital-user"></i>
-                              <h4>10k+</h4>
-                              <span>Happy Patients</span>
-                        </div>
-                        <div class="statistic-item">
-                              <i class="fa-solid fa-calendar-check"></i>
-                              <h4>15+</h4>
-                              <span>Years Experience</span>
-                        </div>
-                        <div class="statistic-item">
-                              <i class="fa-solid fa-bed-pulse"></i>
-                              <h4>50+</h4>
-                              <span>Modern Rooms</span>
-                        </div>
-                        </div>
-
                         <div class="statistic-text">
                         <span>Our Statistics</span>
                         <h2>We Are The Most Trusted Hospital In The Region</h2>

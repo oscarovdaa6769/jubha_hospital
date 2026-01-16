@@ -39,51 +39,67 @@
                               <span>Transforming healthcare in the Eastern Province.</span>
                               <div class="dept-header">
                                     <h4>We deliver a wide range of high-quality services,built on an exellence legacy of exceptional health care.</h4>
-                                    <a href="">All Departments</a>
+                                    <a href="" class="btn">All Departments</a>
                               </div>
                               
                         </div>
                   </div>
-            </div>
-      </section>
-
-
-
-
-      <section class="department-showcase">
-   <div class="container">
-                  <div class="department-grid">
-                        <span>Transforming healthcare in the Eastern Province.</span>
-                        <div class="department-header">
-                              <h2>We deliver a wide range of high-quality services,<br>
-                              built on an exellence legacy of exceptional health care.</h2>
-                              <a href="" class="btn">All Departments</a>
+                  <div class="dept-carousel">
+                        <div class="dept-card glass">
+                              <div class="icon-circle"><i class="fa-solid fa-capsules"></i></div>
+                              <h4>Sleep Medicine</h4>
+                        </div>
+                        <div class="dept-card glass">
+                              <div class="icon-circle"><i class="fa-solid fa-x-ray"></i></div>
+                              <h4>Vascular and Interventional Radiologist</h4>
+                        </div>
+                        <div class="dept-card glass">
+                              <div class="icon-circle"><i class="fa-solid fa-lungs"></i></div>
+                              <h4>Anesthesiology</h4>
+                        </div>
+                        <div class="dept-card glass">
+                              <div class="icon-circle"><i class="fa-solid fa-heart-pulse"></i></div>
+                              <h4>Cardiac Surgery</h4>
+                        </div>
+                        <div class="dept-card glass">
+                              <div class="icon-circle"><i class="fa-solid fa-wave-square"></i></div>
+                              <h4>Cath Lab</h4>
                         </div>
                   </div>
             </div>
-
-    <div class="dept-carousel">
-        <div class="dept-card glass">
-            <div class="icon-circle"></div>
-            <h3>Sleep Medicine</h3>
-        </div>
-        <div class="dept-card glass">
-            <div class="icon-circle"></div>
-            <h3>Vascular and Interventional Radiologist</h3>
-        </div>
-        <div class="dept-card glass">
-            <img src="anesthesiology-icon.png" alt="" class="dept-icon">
-            <h3>Anesthesiology</h3>
-        </div>
-        <div class="dept-card glass">
-            <img src="cardiac-icon.png" alt="" class="dept-icon">
-            <h3>Cardiac Surgery</h3>
-        </div>
-        <div class="dept-card glass active">
-            <img src="cath-lab-icon.png" alt="" class="dept-icon">
-            <h3>Cath Lab</h3>
-        </div>
-    </div>
-</section>
+            <div class="overview-statistic">
+                  <div class="container">
+                        <div class="stat-container">
+                              <h5>Establishing itself as the center for healthcare excellence in the Kingdom, Almana presently employs more than 6,500+ highly qualified professionals including 800+ specialized doctors and has extended its services to operating and managing healthcare contracts in other regions of Saudi Arabia.</h5>
+                              <div class="stats-boxes">
+                                    <div class="statistic-item">
+                                          <i class="fa-solid fa-user-doctor"></i>
+                                          <h4>25+</h4>
+                                          <span>Specialist Doctors</span>
+                                    </div>
+                                    <div class="statistic-item">
+                                          <i class="fa-solid fa-hospital-user"></i>
+                                          <h4>10k+</h4>
+                                          <span>Happy Patients</span>
+                                    </div>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+            <div class="container">
+                  <div class="overview-about-grid">
+                        <div class="overview-about-img">
+                              <img src="https://ds4kyztv1rtw.cloudfront.net/uploads/legacy-of-healthcare-excellence/l_history_img_2.jpg" alt="" height="100%">
+                        </div>
+                        <div class="overview-about-text">
+                              <span class="subtitle">The Visionary Behind</span>
+                              <h2>Driven by the concern to provide healthcare services for the local community, Sheikh Mohammed Abdulla Almana opened the doors of the first healthcare center in the Eastern Province in 1949.</h2>
+                              <p>The beginning was a humble effort. The Group began with modest sized clinics for dental and ophthalmic care. Over the decades these clinics expanded into five large independent ultra-modern hospitals with 3 additional specialized medical centers with out-patient services and medical dispensaries in the four major cities of the Eastern Province, namely, Al-Asha Dammam, Al-Khobar and Jubail.</p>
+                              <a href="" class="btn">Our Lagacy</a>
+                        </div>
+                  </div>
+            </div>
+            
+      </section>
 </main>
 <?php get_footer(); ?>
