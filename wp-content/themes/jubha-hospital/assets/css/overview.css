@@ -26,7 +26,7 @@
 }
 
 .breadcrumb a {
-    color: #00d1d1;
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .overview-dept-grid span {
-    color: #00d1d1;
+    color: var(--accent-color);
     font-weight: bold;
     text-transform: uppercase;
 }

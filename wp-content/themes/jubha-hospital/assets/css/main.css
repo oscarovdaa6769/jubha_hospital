@@ -3,10 +3,11 @@
 @import url('/wp-content/themes/jubha-hospital/assets/css/footer.css');
 @import url('/wp-content/themes/jubha-hospital/assets/css/home.css');
 @import url('/wp-content/themes/jubha-hospital/assets/css/overview.css');
+@import url('/wp-content/themes/jubha-hospital/assets/css/our-culture.css');
 :root {
       --primary-color: #1C4D8D;
       --secondary-color: #0F2854;
-      --accent-color: #BDE8F5;
+      --accent-color: #64b9ff;
       --bg-color: #fff;
       --text-color: #333;
       --container-width: 1280px;

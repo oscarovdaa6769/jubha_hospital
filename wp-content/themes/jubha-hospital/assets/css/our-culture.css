@@ -1,0 +1,53 @@
+.our-purpose-grid {
+      display: grid;
+      grid-template-columns: 30% 70%;
+      align-items: center;
+      color: #fff;
+      margin: 3rem 0;
+      overflow: hidden;
+      border-radius: 10px;
+}
+
+.vision,
+.mission {
+      height: 100%;
+      width: 100%;
+      padding: 3rem;
+}
+
+.vision span,
+.mission span {
+      color: var(--accent-color);
+      font-weight: bold;
+      text-transform: uppercase;
+}
+
+.vision h4, 
+.mission h4 {
+      font-size: 1.3rem;
+      margin: 20px 0;
+}
+
+.vision ul,
+.mission ul {
+      margin-left: 20px;
+}
+
+.vision ul li p,
+.mission ul li p {
+      margin: 0 0 20px 20px;
+      line-height: 1.6;
+}
+
+.vision {
+      background-color: var(--primary-color);
+}
+
+.mission {
+      background-color: var(--secondary-color);
+}
+
+.our-values-grid h2 {
+      font-size: 2rem;
+      
+}
