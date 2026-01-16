@@ -4,8 +4,8 @@
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/main.css">
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
   <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 
@@ -16,27 +16,24 @@
 
 <header class="site-header">
       <div class="container">
-            <img src="/wp-content/themes/jubha-hospital/assets/css/images/logo.png" alt="logo-brand" height="100px">
+            <img src="wp-content/themes/jubha-hospital/assets/images/logo.png" alt="logo-brand" height="100px">
             <div class="cta">
-                  <a href="" style="padding: 10px 20px;"><i class="fa-solid fa-phone"></i> +855 88 798 0828</a>
-                  <a href="" style="padding: 10px 20px;">
+                  <a href="#" class="btn"><i class="fa-solid fa-phone"></i> 920033440</a>
+                  <a href="<?php echo home_url('/book-now/'); ?>" class="btn">
                         <i class="fa-solid fa-calendar-check"></i>
                         Book an appointment
                   </a>
-                  <button class="btn"><i class="fa-solid fa-user"></i></button>
+                  <button class="btn-cc"><i class="fa-solid fa-user"></i></button>
             </div>
       </div>
       <div class="container">
             <nav class="site-nav">
-                  <ul>
-                        <li><a href="">Find A Doctor</a></li>
-                        <li><a href="">Hospital & Clinic</a></li>
-                        <li><a href="">Patient Information</a></li>
-                        <li><a href="">About Us</a></li>
-                        <li><a href="">Media</a></li>
-                        <li><a href="">Contact</a></li>
-                        <li><a href="">National Day Offer</a></li>
-                  </ul>
+                  <?php
+                  wp_nav_menu(array(
+                  'theme_location' => 'navigation-menu',
+                  'container' => false
+                  ));
+                  ?>
             </nav>
       </div>
-</header
+</header>

@@ -1,0 +1,142 @@
+.site-footer {
+      background: #1C4D8D;
+      color: #ffffff;
+      padding: 40px 0 0;
+      font-size: 14px;
+}
+
+.footer-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 1280px;
+      margin: auto;
+      gap: 30px;
+}
+
+.footer-column h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+}
+
+.footer-column p {
+      margin-bottom: 10px;
+}
+
+.footer-column p i {
+      margin-right: 5px;
+}
+
+.footer-column ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+}
+
+.footer-column ul li a {
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-block;
+      transition: transform 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+      transform: translateX(10px);
+}
+
+.newsletter-form {
+      margin-top: 20px;
+      max-width: 400px;
+}
+
+.input-group {
+      display: flex;
+      background-color: #fff;
+      padding: 5px;
+      border-radius: 1000px;
+      border: 1px solid #ddd;
+      transition: border-color 0.3s ease;
+}
+
+.input-group:focus-within {
+      border-color: var(--secondary-color);
+}
+
+.email-form {
+      flex: 1;
+      border: none;
+      background: none;
+      padding: 10px 20px;
+      outline: none;
+      font-size: 14px;
+      color: #333;
+}
+
+.subscribe-btn {
+      background-color: var(--secondary-color);
+      color: white;
+      border: none;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%; /* Circular button */
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.subscribe-btn:hover {
+      background-color: var(--accent-color);
+      transform: scale(1.05);
+}
+
+.wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+}
+
+.footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.2);
+      padding: 15px 0;
+      font-size: 13px;
+      background-color: var(--secondary-color);
+}
+
+.footer-bottom-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+}
+
+.footer-legal {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+}
+
+.footer-legal a {
+      color: #fff ;
+}
+
+.footer-social {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 1rem;
+}
+
+.footer-social a {
+      color: var(--primary-color);
+      transition: all 0.3s ease;
+}
+
+.footer-social a:hover {
+      scale: 1.05;
+      color: var(--accent-color);
+}
