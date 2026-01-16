@@ -1,99 +1,221 @@
 <?php 
 /*
 Plugin Name: Jubha Hospital Appointment Booker
-Description: Advanced booking system with Force-Display and Admin Delete.
-Version: 1.6
+Description: Fixed booking system with unique menus and corrected database columns.
+Version: 1.7
 */
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-// 1. DATABASE: Setup table
-register_activation_hook(__FILE__, 'jubha_final_db');
-function jubha_final_db() {
+// 1. DATABASE SETUP
+function jubha_setup_database() {
     global $wpdb;
-    $table_name = $wpdb->prefix . 'hospital_appointments';
-    $sql = "CREATE TABLE $table_name (
+    $charset_collate = $wpdb->get_charset_collate();
+    require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+    // Inside your jubha_setup_database() function
+    $sql1 = "CREATE TABLE {$wpdb->prefix}jubha_patients (
         id mediumint(9) NOT NULL AUTO_INCREMENT,
         patient_name varchar(100) NOT NULL,
-        email varchar(100) NOT NULL,
-        phone varchar(20) NOT NULL,
-        department varchar(50) NOT NULL,
-        appointment_date date NOT NULL,
+        dob date, -- This is the new column
+        email varchar(100),
+        phone varchar(20),
         PRIMARY KEY  (id)
-    ) {$wpdb->get_charset_collate()};";
-    require_once(ABSPATH . 'wp-admin/includes/upgrade.php');
-    dbDelta($sql);
+    ) $charset_collate;";
+
+    // Doctors Table (Fixed column names)
+    $sql2 = "CREATE TABLE {$wpdb->prefix}jubha_doctors (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        doctor_name varchar(100) NOT NULL,
+        specialty varchar(100),
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    // Appointments Table
+    $sql3 = "CREATE TABLE {$wpdb->prefix}jubha_appointments (
+        id mediumint(9) NOT NULL AUTO_INCREMENT,
+        patient_id mediumint(9) NOT NULL,
+        doctor_id mediumint(9) NOT NULL,
+        app_date date NOT NULL,
+        status varchar(20) DEFAULT 'pending',
+        PRIMARY KEY  (id)
+    ) $charset_collate;";
+
+    dbDelta( array($sql1, $sql2, $sql3) );
 }
+register_activation_hook( __FILE__, 'jubha_setup_database' );
 
-// 2. THE FORM: Using a function we can call anywhere
-function jubha_get_appointment_form() {
+// 2. ADMIN MENU SETUP (Fixed Duplication)
+function jubha_admin_menu() {
+    add_menu_page('Jubha Bookings', 'Bookings', 'manage_options', 'jubha-bookings', 'jubha_bookings_page', 'dashicons-calendar-alt');
+    add_submenu_page('jubha-bookings', 'Add Patient', 'Create Patient', 'manage_options', 'jubha-add-patient', 'jubha_add_patient_page');
+    add_submenu_page('jubha-bookings', 'Add Doctor', 'Create Doctor', 'manage_options', 'jubha-add-doctor', 'jubha_add_doctor_page');
+    // FIXED: Unique slug and unique callback function below
+    add_submenu_page('jubha-bookings', 'Add Appointment', 'Create Appointment', 'manage_options', 'jubha-add-appointment', 'jubha_create_appointment_page');
+}
+add_action('admin_menu', 'jubha_admin_menu');
+
+// 3. CREATE PATIENT PAGE
+function jubha_add_patient_page() {
     global $wpdb;
-    $msg = '';
-
-    if (isset($_POST['jubha_submit_final'])) {
-        $wpdb->insert($wpdb->prefix . 'hospital_appointments', array(
+    if (isset($_POST['save_patient'])) {
+        $wpdb->insert($wpdb->prefix . 'jubha_patients', array(
             'patient_name' => sanitize_text_field($_POST['p_name']),
-            'email' => sanitize_email($_POST['p_email']),
-            'phone' => sanitize_text_field($_POST['p_phone']),
-            'department' => sanitize_text_field($_POST['p_dept']),
-            'appointment_date' => sanitize_text_field($_POST['p_date'])
+            'dob'          => sanitize_text_field($_POST['p_dob']), // Save DOB
+            'phone'        => sanitize_text_field($_POST['p_phone']),
+            'email'        => sanitize_email($_POST['p_email'])
         ));
-        $msg = '<div style="background:#d4edda; color:#155724; padding:15px; border-radius:10px; margin-bottom:20px; text-align:center;">Success! Appointment Booked.</div>';
+        echo '<div class="updated"><p>Patient Registered!</p></div>';
     }
-
-    $form = '
-    <div id="jubha-form-container" style="background:#fff; padding:30px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.1); max-width:450px; margin:20px auto; font-family:sans-serif;">
-        '.$msg.'
-        <h2 style="color:#0a2540; text-align:center;">Book Appointment</h2>
-        <form method="POST">
-            <input type="text" name="p_name" placeholder="Full Name" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-            <input type="email" name="p_email" placeholder="Email Address" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-            <input type="tel" name="p_phone" placeholder="Phone Number" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-            <select name="p_dept" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-                <option value="">Choose Department</option>
-                <option value="Cardiology">Cardiology</option>
-                <option value="Orthopedics">Orthopedics</option>
-                <option value="General">General Medicine</option>
-            </select>
-            <input type="date" name="p_date" required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:8px;">
-            <button type="submit" name="jubha_submit_final" style="width:100%; background:#0a2540; color:#fff; padding:15px; border:none; border-radius:30px; font-weight:bold; cursor:pointer;">Confirm Booking</button>
+    ?>
+    <div class="wrap">
+        <h1>Create New Patient</h1>
+        <form method="post">
+            <table class="form-table">
+                <tr><th>Full Name</th><td><input name="p_name" type="text" required></td></tr>
+                <tr><th>Date of Birth</th><td><input name="p_dob" type="date" required></td></tr>
+                <tr><th>Phone</th><td><input name="p_phone" type="text"></td></tr>
+            </table>
+            <input type="submit" name="save_patient" class="button button-primary" value="Save Patient">
         </form>
-    </div>';
-    return $form;
+    </div>
+    <?php
 }
 
-// Register shortcode
-add_shortcode('jubha_appointment_form', 'jubha_get_appointment_form');
-
-// 3. ADMIN: Bookings list with DELETE button
-add_action('admin_menu', 'jubha_admin_setup');
-function jubha_admin_setup() {
-    add_menu_page('Appointments', 'Bookings', 'manage_options', 'jubha-bookings', 'jubha_admin_view', 'dashicons-calendar-alt', 6);
-}
-
-function jubha_admin_view() {
+// 4. CREATE DOCTOR PAGE
+function jubha_add_doctor_page() {
     global $wpdb;
-    $table = $wpdb->prefix . 'hospital_appointments';
-
-    // Delete Logic
-    if (isset($_GET['del'])) {
-        $wpdb->delete($table, array('id' => intval($_GET['del'])));
-        echo '<div class="updated"><p>Record Deleted!</p></div>';
+    if (isset($_POST['save_doctor'])) {
+        $wpdb->insert($wpdb->prefix . 'jubha_doctors', array(
+            'doctor_name' => sanitize_text_field($_POST['doctor_name']),
+            'specialty'   => sanitize_text_field($_POST['specialty'])
+        ));
+        echo '<div class="updated"><p>Doctor successfully added!</p></div>';
     }
-
-    $data = $wpdb->get_results("SELECT * FROM $table ORDER BY id DESC");
-    echo '<div class="wrap"><h1>Appointment List</h1><table class="wp-list-table widefat fixed striped">
-    <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Dept</th><th>Date</th><th>Action</th></tr></thead><tbody>';
-    foreach ($data as $row) {
-        $del_url = admin_url('admin.php?page=jubha-bookings&del=' . $row->id);
-        echo "<tr>
-            <td>{$row->patient_name}</td>
-            <td>{$row->email}</td>
-            <td>{$row->phone}</td>
-            <td>{$row->department}</td>
-            <td>{$row->appointment_date}</td>
-            <td><a href='{$del_url}' class='button button-link-delete' onclick='return confirm(\"Are you sure?\")'>Delete</a></td>
-        </tr>";
-    }
-    echo '</tbody></table></div>';
+    ?>
+    <div class="wrap">
+        <h1>Create New Doctor</h1>
+        <form method="post">
+            <table class="form-table">
+                <tr><th>Doctor Name</th><td><input type="text" name="doctor_name" class="regular-text" required></td></tr>
+                <tr><th>Specialty</th><td>
+                    <select name="specialty">
+                        <option value="Neurology">Neurology</option>
+                        <option value="Oncology">Oncology</option>
+                        <option value="Orthopedics">Orthopedics</option>
+                    </select>
+                </td></tr>
+            </table>
+            <input type="submit" name="save_doctor" class="button button-primary" value="Save Doctor">
+        </form>
+    </div>
+    <?php
 }
+
+// 5. CREATE APPOINTMENT PAGE (Fixed DB Error and Selection)
+function jubha_create_appointment_page() {
+    global $wpdb;
+    
+    // Handle Save Logic
+    if (isset($_POST['save_appointment'])) {
+        $wpdb->insert($wpdb->prefix . 'jubha_appointments', array(
+            'patient_id' => intval($_POST['p_id']),
+            'doctor_id'  => intval($_POST['d_id']),
+            'app_date'   => sanitize_text_field($_POST['app_date']),
+            'status'     => 'pending'
+        ));
+        echo '<div class="updated"><p>Appointment booked successfully!</p></div>';
+    }
+
+    // Fetch data for dropdowns
+    $patients = $wpdb->get_results("SELECT id, patient_name FROM {$wpdb->prefix}jubha_patients");
+    $doctors = $wpdb->get_results("SELECT id, doctor_name FROM {$wpdb->prefix}jubha_doctors");
+
+    ?>
+    <div class="wrap">
+        <h1>Schedule Appointment</h1>
+        <form method="post">
+            <table class="form-table">
+                <tr><th>Select Patient</th><td>
+                    <select name="p_id" required>
+                        <?php foreach ($patients as $p) echo "<option value='{$p->id}'>{$p->patient_name}</option>"; ?>
+                    </select>
+                </td></tr>
+                <tr><th>Select Doctor</th><td>
+                    <select name="d_id" required>
+                        <?php foreach ($doctors as $d) echo "<option value='{$d->id}'>{$d->doctor_name}</option>"; ?>
+                    </select>
+                </td></tr>
+                <tr><th>Date</th><td><input type="date" name="app_date" required></td></tr>
+            </table>
+            <input type="submit" name="save_appointment" class="button button-primary" value="Book Appointment">
+        </form>
+    </div>
+    <?php
+}
+
+function jubha_bookings_page() {
+    global $wpdb;
+
+    // Handle Delete Action
+    if (isset($_GET['action']) && $_GET['action'] == 'delete' && isset($_GET['id'])) {
+        $wpdb->delete($wpdb->prefix . 'jubha_appointments', array('id' => intval($_GET['id'])));
+        echo '<div class="updated"><p>Appointment deleted.</p></div>';
+    }
+
+    // SQL JOIN to get names instead of IDs
+    $query = "
+        SELECT 
+            app.id, 
+            p.patient_name, 
+            d.doctor_name, 
+            app.app_date, 
+            app.status 
+        FROM {$wpdb->prefix}jubha_appointments app
+        JOIN {$wpdb->prefix}jubha_patients p ON app.patient_id = p.id
+        JOIN {$wpdb->prefix}jubha_doctors d ON app.doctor_id = d.id
+        ORDER BY app.app_date ASC
+    ";
+    $bookings = $wpdb->get_results($query);
+    ?>
+    <div class="wrap">
+        <h1 class="wp-heading-inline">Scheduled Appointments</h1>
+        <a href="?page=jubha-add-appointment" class="page-title-action">Add New</a>
+        <hr class="wp-header-end">
+
+        <table class="wp-list-table widefat fixed striped">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Appointment Date</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php if ($bookings): ?>
+                    <?php foreach ($bookings as $row): ?>
+                        <tr>
+                            <td><?php echo $row->id; ?></td>
+                            <td><strong><?php echo esc_html($row->patient_name); ?></strong></td>
+                            <td><?php echo esc_html($row->doctor_name); ?></td>
+                            <td><?php echo esc_html($row->app_date); ?></td>
+                            <td><span class="status-tag"><?php echo esc_html($row->status); ?></span></td>
+                            <td>
+                                <a href="?page=jubha-bookings&action=delete&id=<?php echo $row->id; ?>" 
+                                   class="button-link-delete" 
+                                   onclick="return confirm('Delete this appointment?')">Delete</a>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
+                <?php else: ?>
+                    <tr><td colspan="6">No appointments found.</td></tr>
+                <?php endif; ?>
+            </tbody>
+        </table>
+    </div>
+    <?php
+}
+
