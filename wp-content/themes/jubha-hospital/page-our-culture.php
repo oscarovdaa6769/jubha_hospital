@@ -36,58 +36,54 @@
             <div class="container">
                   <div class="our-values-grid">
                         <h2>Our Values</h2>
-            
-                        <ul class="values-list">
-                        <li class="value-item">
-                              <div class="icon">
-                              <img src="path/to/integrity-icon.png" alt="Integrity icon">
-                              </div>
-                              <div class="content">
-                              <h3>Integrity</h3>
-                              <p>We keep our work and deliver honest, ethical, and transparent actions and services</p>
-                              </div>
-                        </li>
 
-                        <li class="value-item">
-                              <div class="icon">
-                              <img src="path/to/trust-icon.png" alt="Trust icon">
+                        <div class="values-list">
+                              <div class="value-item">
+                                    <div class="icon">
+                                          <i class="fa-solid fa-shield-halved"></i>
+                                    </div>
+                                    <div class="content">
+                                          <span>Integrity</span>
+                                          <p>We keep our work and deliver honest, ethical, and transparent actions and services</p>
+                                    </div>
                               </div>
-                              <div class="content">
-                              <h3>Value of Trust</h3>
-                              <p>We establish and grow the worthiness of trust and demonstrate ability, reliability, and strength to build equity and the value of our brand</p>
+                              <div class="value-item">
+                                    <div class="icon">
+                                          <i class="fa-solid fa-shield-heart"></i>
+                                    </div>
+                                    <div class="content">
+                                          <span>Value of Trust</span>
+                                          <p>We establish and grow the worthiness of trust and demonstrate ability, reliability, and strength to build equity and the value of our brand</p>
+                                    </div>
                               </div>
-                        </li>
-
-                        <li class="value-item">
-                              <div class="icon">
-                              <img src="path/to/care-icon.png" alt="Care, Compassion & Collaboration icon">
+                              <div class="value-item">
+                                    <div class="icon">
+                                         <i class="fa-solid fa-hand-holding-heart"></i>
+                                    </div>
+                                    <div class="content">
+                                          <span>Care, Compassion & Collaboration</span>
+                                          <p>We are stronger together in our determination to deliver excellence in care, hope and support to our patients and our internal and external customers</p>
+                                    </div>
                               </div>
-                              <div class="content">
-                              <h3>Care, Compassion & Collaboration</h3>
-                              <p>We are stronger together in our determination to deliver excellence in care, hope and support to our patients and our internal and external customers</p>
+                              <div class="value-item">
+                                    <div class="icon">
+                                          <i class="fa-solid fa-user-check"></i>
+                                    </div>
+                                    <div class="content">
+                                          <span>Respect</span>
+                                          <p>We treat our diverse community with the dignity, confidentiality, and honesty they deserve</p>
+                                    </div>
                               </div>
-                        </li>
-
-                        <li class="value-item">
-                              <div class="icon">
-                              <img src="path/to/respect-icon.png" alt="Respect icon">
+                              <div class="value-item" style="border-bottom: none;">
+                                    <div class="icon">
+                                          <i class="fa-solid fa-hospital-user"></i>
+                                    </div>
+                                    <div class="content">
+                                          <span>Patient Focused Excellence</span>
+                                          <p>Our patients and customers are the ultimate judge of our brand. We tirelessly ensure innovation and adaptation for world-class experiences across all areas with which they come into contact</p>
+                                    </div>
                               </div>
-                              <div class="content">
-                              <h3>Respect</h3>
-                              <p>We treat our diverse community with the dignity, confidentiality, and honesty they deserve</p>
-                              </div>
-                        </li>
-
-                        <li class="value-item">
-                              <div class="icon">
-                              <img src="path/to/excellence-icon.png" alt="Patient Focused Excellence icon">
-                              </div>
-                              <div class="content">
-                              <h3>Patient Focused Excellence</h3>
-                              <p>Our patients and customers are the ultimate judge of our brand. We tirelessly ensure innovation and adaptation for world-class experiences across all areas with which they come into contact</p>
-                              </div>
-                        </li>
-                        </ul>
+                        </div>
                   </div>
             </div>
       </section>
