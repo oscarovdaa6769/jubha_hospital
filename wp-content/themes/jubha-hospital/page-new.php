@@ -126,50 +126,48 @@
 
 
 
-<div class="news-listing-main-top">
-  <div class="picture-top">
+<div class="news-card">
+  <div class="news-card-image">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful Scoliosis Surgery.png" alt="Doctor">
   </div>
 
-  <div class="text-top">
-    <h3>Successful Scoliosis Surgery For 14-year-Old Girl</h3>
-
+  <div class="news-card-content">
+    <h3>Succe Girl</h3>
     <p>
       In a medical achievement we take great pride in, our surgical team at Almana Hospital in Dammam, led by spinal surgery consultant Dr. Ahmed Hamed Amin, successfully performed a complex scoliosis correction surgery for a 14-year-old girl suffering from an advanced spinal curvature exceeding 54 degrees.
     </p>
-
-    <button class="read-more-btn" onclick="openDetail()">
-      Read more <i class="fa-solid fa-arrow-right"></i>
-    </button>
+    <button class="read-more-btn" onclick="openDetail()">Read more <i class="fa-solid fa-arrow-right"></i></button>
   </div>
 </div>
 
-<!-- ✅ DETAIL SECTION (HIDDEN INITIALLY) -->
-<div class="news-detail-overlay" id="newsDetail">
-  <div class="news-detail-box">
-    <span class="close-btn" onclick="closeDetail()">×</span>
+<!-- Modal -->
+<div id="newsDetail" class="news-detail-modal" onclick="closeModalOutside(event)">
+  <div class="news-detail-content">
+    <span class="close-btn" onclick="closeDetail()">&times;</span>
 
-    <div class="news-detail-content">
-      <div class="detail-image">
-        <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful Scoliosis Surgery.png">
-      </div>
-
-      <div class="detail-text">
-        <h2>Successful Scoliosis Surgery For 14-year-Old Girl</h2>
-        <p>
-          In a medical achievement we take great pride in, our surgical team at Almana Hospital in Dammam, led by spinal surgery consultant Dr. Ahmed Hamed Amin, successfully performed a complex scoliosis correction surgery for a 14-year-old girl suffering from an advanced spinal curvature exceeding 54 degrees.
-
-Despite the complexity of the case, the corrective procedure was completed in just five hours — a notably shorter duration compared to the typical 8–9 hours required for similar surgeries. The operation involved 11 vertebrae, from the fourth thoracic vertebra to the second lumbar vertebra, with 20 screws and supportive rods used to achieve the desired spinal alignment with high precision.
-
-We are pleased to report that the patient is now recovering well and is expected to return to her normal life in the near future, God willing.
-        </p>
-        <p>
-            This milestone highlights the advanced surgical expertise of our medical team and reflects Almana Hospital’s ongoing commitment to delivering high-quality, specialized healthcare. It also demonstrates the continued progress of the healthcare sector in the Kingdom of Saudi Arabia.
-        </p>
-      </div>
+    <!-- IMAGE -->
+    <div class="detail-image">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful Scoliosis Surgery.png" alt="Scoliosis Surgery">
     </div>
+
+    <!-- TEXT -->
+    <div class="detail-text">
+      <h2>Successful Scoliosis Surgery</h2>
+
+      <p>
+        The surgery involved a multi-level spinal fusion with precision instrumentation to correct the curvature. Postoperative care included intensive physiotherapy and follow-up X-rays to ensure proper alignment and recovery.
+      </p>
+
+      <p>
+        Dr. Ahmed Hamed Amin emphasized the importance of early detection and timely surgical intervention in severe scoliosis cases to prevent further complications and improve the patient’s quality of life.
+      </p>
+    </div>
+
   </div>
 </div>
+
+
+
 <script>
 function openDetail(){
   document.getElementById("newsDetail").style.display = "flex";
@@ -178,6 +176,17 @@ function openDetail(){
 function closeDetail(){
   document.getElementById("newsDetail").style.display = "none";
 }
+
+// Close modal if clicked outside the content box
+function closeModalOutside(event){
+  const modal = document.getElementById("newsDetail");
+  if(event.target === modal){
+    modal.style.display = "none";
+  }
+}
 </script>
+
+
+
 
 <?php get_footer() ;?>
