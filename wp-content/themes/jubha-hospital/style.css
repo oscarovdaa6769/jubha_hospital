@@ -1,53 +1,95 @@
-/* Hero container */
+/* Hero section - Find A Doctor */
 .hero-find-doctor {
-  position: relative;
-  height: 450px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;   /* vertical center */
+    position: relative;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    /* Alternative options: 
+       - background: url('/images/hero-doctor-bg.jpg') center/cover no-repeat;
+       - background: #0f766e; (teal medical feel)
+    */
+    color: white;
+    padding: 7rem 2rem 6rem;
+    text-align: center;
+    overflow: hidden;
 }
 
-/* Background (your blur) */
+/* Optional: subtle overlay pattern or texture */
 .hero-find-doctor::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25)),
-    url("https://static.scientificamerican.com/sciam/cache/file/3A236506-E48D-4F38-B1A565180005173E_source.jpg?w=1200");
-  background-size: cover;
-  background-position: top;
-  filter: blur(5px);
-  transform: scale(1.1);
-  z-index: 0;
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.12) 0%, transparent 60%);
+    pointer-events: none;
 }
 
-/* Content on top */
 .hero-content {
-  position: relative;
-  z-index: 1;
-  margin-left: 60px;   /* LEFT spacing */
-  color: white;
-  text-align: left;
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Title */
-.hero-content h1 {
-  font-size: 48px;
-  margin-top: 250px;
+.hero-find-doctor h1 {
+    font-size: clamp(2.8rem, 7vw, 4.5rem);
+    font-weight: 700;
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.25);
 }
 
-/* Button */
-.hero-btn {
-  padding: 12px 28px;
-  font-size: 16px;
-  background-color: #1e88e5;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
+.hero-find-doctor .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
 }
 
-.hero-btn:hover {
-  background-color: #1565c0;
+.hero-find-doctor .icon a {
+    color: white;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.hero-find-doctor .icon a:hover {
+    color: #e0f2fe;
+    transform: translateY(-1px);
+}
+
+.hero-find-doctor .icon i {
+    font-size: 1.35rem;
+    opacity: 0.9;
+}
+
+.hero-find-doctor .icon p {
+    margin: 0;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+    .hero-find-doctor {
+        padding: 5rem 1.25rem 4rem;
+    }
+    
+    .hero-find-doctor h1 {
+        font-size: clamp(2.2rem, 8vw, 3.2rem);
+    }
+    
+    .hero-find-doctor .icon {
+        font-size: 1rem;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+.hero-find-doctor {
+    background: #0f172a;
+    border-bottom: 1px solid #334155;
+}
+
+.hero-find-doctor h1 {
+    background: linear-gradient(to right, #60a5fa, #a78bfa);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

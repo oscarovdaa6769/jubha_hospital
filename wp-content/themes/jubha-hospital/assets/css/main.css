@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:opsz@17..18&display=swap');
+@import url('/wp-content/themes/jubha-hospital/assets/css/header.css');
+@import url('/wp-content/themes/jubha-hospital/assets/css/footer.css');
+:root {
+      --primary-color: #1C4D8D;
+      --secondary-color: #0F2854;
+      --accent-color: #BDE8F5;
+      --bg-color: #fff;
+      --text-color: #333;
+      --container-width: 1280px;
+}
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      border: none;
+      background-color: initial;
+}
+
+body {
+      font-family: "Google Sans", sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+}
+
+.site-header {
+      background-color: var(--primary-color);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+}
+
+.container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+}
+
+.cta {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+}
+
+.cta a {
+      background-color: var(--secondary-color);
+      border-radius: 1000px;
+      padding: 10px;
+      color: #fff;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+}
+
+.cta a:hover {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+}
+
+.btn {
+      background-color: var(--secondary-color);
+      border-radius: 1000px;
+      padding: 10px;
+      color: #fff;
+      transition: all 0.3s ease;
+}
+
+.btn:hover {
+      background-color: var(--accent-color);
+      color: var(--text-color);
+}
+
