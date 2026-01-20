@@ -36,7 +36,20 @@
   font-size: 48px;
   margin-top: 260px;
 }
+.icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+.icon i{
+  font-size: 18px;
+  color: #007bff;
+}
+.icon p{
+  font-size: 18px;
+  font-family: "google sans ",sans-serrif;
+}
 /* Button */
 .hero-btn {
   padding: 12px 28px;

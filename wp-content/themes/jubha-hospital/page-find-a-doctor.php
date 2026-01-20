@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>">
+<link rel="stylesheet" href="<?php get_template_directory_uri() . '/assets/css/style.css'; ?>">
+
 
 <div class="hero-find-doctor">
   <div class="hero-content">
