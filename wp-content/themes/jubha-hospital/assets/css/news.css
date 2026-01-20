@@ -1,0 +1,89 @@
+.news {
+      padding: 3rem 0;
+      background-color: #f3f3f3;
+}
+.news-grid {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      align-items: center;
+      gap: 1.5rem;
+}
+
+.news-grid .img {
+      height: 350px;
+      width: 100%;
+      overflow: hidden;
+      border-radius: 10px;
+}
+
+.news-grid .img img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: scale 0.3s ease;
+}
+
+.news-grid .img img:hover {
+      scale: 1.05;
+}
+
+.news-grid .content span {
+      font-size: 2rem;
+}
+
+.content .btn {
+      align-self: flex-start;
+}
+
+.mini-news {
+      padding: 3rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+}
+
+.mini-news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: flex-start;
+      gap: 2rem;
+}
+
+.mini-news-card {
+      overflow: hidden;
+      border-radius: 10px;
+      border: 1px solid #eee;
+}
+
+.mini-news-card .img {
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+}
+
+.mini-news-card .img img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      transition: scale 0.3s ease;
+}
+
+.mini-news-card:hover img {
+      scale: 1.05;
+}
+
+.mini-news-card .text {
+      margin: 1rem 1.5rem;
+}
+
+.mini-news-card .text span {
+      font-size: 1rem;
+}
+
+.mini-news-card .text h4 {
+      font-size: 1.3rem;
+}
+
+.mini-news-card .text .btn {
+      align-self: flex-start;
+}
