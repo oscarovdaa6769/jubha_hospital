@@ -126,67 +126,78 @@
 
 
 
-<div class="news-card">
-  <div class="news-card-image">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful Scoliosis Surgery.png" alt="Doctor">
+<!-- News Item (visible on main page) -->
+<div class="news-item" data-modal="modal-scoliosis">
+  <div class="news-image">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful.png" alt="Doctor">
   </div>
-
-  <div class="news-card-content">
-    <h3>Succe Girl</h3>
-    <p>
-      In a medical achievement we take great pride in, our surgical team at Almana Hospital in Dammam, led by spinal surgery consultant Dr. Ahmed Hamed Amin, successfully performed a complex scoliosis correction surgery for a 14-year-old girl suffering from an advanced spinal curvature exceeding 54 degrees.
-    </p>
-    <button class="read-more-btn" onclick="openDetail()">Read more <i class="fa-solid fa-arrow-right"></i></button>
-  </div>
-</div>
-
-<!-- Modal -->
-<div id="newsDetail" class="news-detail-modal" onclick="closeModalOutside(event)">
-  <div class="news-detail-content">
-    <span class="close-btn" onclick="closeDetail()">&times;</span>
-
-    <!-- IMAGE -->
-    <div class="detail-image">
-      <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful Scoliosis Surgery.png" alt="Scoliosis Surgery">
-    </div>
-
-    <!-- TEXT -->
-    <div class="detail-text">
-      <h2>Successful Scoliosis Surgery</h2>
-
-      <p>
-        The surgery involved a multi-level spinal fusion with precision instrumentation to correct the curvature. Postoperative care included intensive physiotherapy and follow-up X-rays to ensure proper alignment and recovery.
-      </p>
-
-      <p>
-        Dr. Ahmed Hamed Amin emphasized the importance of early detection and timely surgical intervention in severe scoliosis cases to prevent further complications and improve the patient’s quality of life.
-      </p>
-    </div>
-
+  
+  <div class="news-content">
+    <h2>Successful Scoliosis Surgery for 14-Year-Old Girl</h2>
+    
+    <p>Despite the complexity of the case, the corrective procedure was completed in just five hours — a notably shorter duration compared to the typical 8–9 hours required for similar surgeries. The operation involved 11 vertebrae, from the fourth thoracic vertebra...</p>
+    
+    <span class="read-more">READ MORE →</span>
   </div>
 </div>
 
+<!-- Modal - Detailed version -->
+<div id="modal-scoliosis" class="news-modal">
+  <div class="modal-content">
+    <span class="modal-close">×</span>
+    
+    <div class="modal-header">
+      <h1>Successful Scoliosis Surgery for 14-Year-Old Girl</h1>
+      <p class="modal-subtitle">Complex 11-level correction completed in just 5 hours</p>
+    </div>
 
+    <div class="modal-images">
+      <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/ccessful.png" alt="Doctor">
+      
+    </div>
 
+    <div class="modal-body">
+      <p><strong>Case overview:</strong> A 14-year-old girl with severe scoliosis (significant spinal curvature) underwent a multi-level spinal fusion surgery. Despite the complexity involving 11 vertebrae (starting from the fourth thoracic vertebra T4), the entire corrective procedure was successfully completed in only <strong>5 hours</strong> — considerably shorter than the usual 8–9 hours required for similar extensive corrections.</p>
+      
+      <p>The surgery utilized modern precision instrumentation and advanced intraoperative neuromonitoring, allowing for safer and more efficient correction of the spinal deformity.</p>
+      
+      <blockquote>
+        "Early detection and timely surgical intervention in severe scoliosis cases are crucial. This not only prevents further progression and potential complications to heart and lung function, but also significantly improves the patient’s quality of life and self-confidence."
+        <footer>— Dr. Ahmed Hamed Amin, Spine Surgeon</footer>
+      </blockquote>
+
+      <p><strong>Postoperative progress:</strong> The patient showed excellent recovery with intensive physiotherapy starting day 2 post-op. Follow-up X-rays confirmed good alignment and solid fixation. She was discharged in stable condition and continues outpatient rehabilitation.</p>
+    </div>
+  </div>
+</div>
 <script>
-function openDetail(){
-  document.getElementById("newsDetail").style.display = "flex";
-}
+  document.querySelectorAll('.news-item').forEach(item => {
+  item.addEventListener('click', function(e) {
+    // Prevent opening modal when clicking inside text, but optional
+    if (!e.target.closest('.read-more')) return;
+    
+    const modalId = this.getAttribute('data-modal');
+    const modal = document.getElementById(modalId);
+    if (modal) {
+      modal.style.display = 'flex';
+    }
+  });
+});
 
-function closeDetail(){
-  document.getElementById("newsDetail").style.display = "none";
-}
+document.querySelectorAll('.modal-close').forEach(btn => {
+  btn.addEventListener('click', function() {
+    this.closest('.news-modal').style.display = 'none';
+  });
+});
 
-// Close modal if clicked outside the content box
-function closeModalOutside(event){
-  const modal = document.getElementById("newsDetail");
-  if(event.target === modal){
-    modal.style.display = "none";
-  }
-}
+// Close modal when clicking outside content
+document.querySelectorAll('.news-modal').forEach(modal => {
+  modal.addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.display = 'none';
+    }
+  });
+});
 </script>
-
-
-
 
 <?php get_footer() ;?>
