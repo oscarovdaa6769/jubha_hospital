@@ -84,38 +84,55 @@
   <a href="/doctor5/">Y</a>
   <a href="/doctor3/">Z</a>
 </div>
+<div id="doctorModal" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <div class="modal-body">
+      <div class="modal-image">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor15.jpg" alt="Doctor">
+      </div>
+      <div class="modal-details">
+        <h2 id="modalName">Dentist Rihab Mubarak Ahmed</h2>
+        
+        <div class="detail-group">
+          <label>Speciality Area</label>
+          <p id="modalSpec">Dentist</p>
+        </div>
 
-<div class="hero-doctor">
-  <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor17.jpg" alt="Doctor">
-    <div class="doctor-info">
-      <h3>Dr. John Doe</h3>
-      <p>Cardiologist</p>
-    </div>
-  </div>
-  <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor1.jpg" alt="Doctor">
-    <div class="doctor-info">
-      <h3>Dr. John Doe</h3>
-      <p>Cardiologist</p>
-    </div>
-  </div>
-  <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor13.jpg" alt="Doctor">
-    <div class="doctor-info">
-      <h3>Dr. John Doe</h3>
-      <p>Cardiologist</p>
-    </div>
-  </div>
-  <div class="doctor-profile">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/css/images/doctor4.jpg" alt="Doctor">
-    <div class="doctor-info">
-      <h3>Dr. John Doe</h3>
-      <p>Cardiologist</p>
+        <div class="detail-group">
+          <label>Locations</label>
+          <p id="modalLoc">AMC Rakkah</p>
+        </div>
+
+        <div class="detail-group">
+          <label>Qualifications</label>
+          <p id="modalQual">-</p>
+        </div>
+
+        <div class="modal-actions">
+          <button class="btn-book">BOOK AN APPOINTMENT</button>
+          <a href="#" class="view-profile">VIEW PROFILE &rarr;</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Place all your code inside here
+  document.querySelectorAll('.doctor-profile').forEach(card => {
+    card.addEventListener('click', () => {
+      const modal = document.getElementById('doctorModal');
+      // ... the rest of your code
+      modal.style.display = 'flex';
+    });
+  });
 
+  document.querySelector('.close-modal').onclick = () => {
+    document.getElementById('doctorModal').style.display = 'none';
+  };
+});
+</script>
 
 <div class="hero-doctor">
   <div class="doctor-profile">

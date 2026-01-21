@@ -276,3 +276,135 @@
   border-radius: 10px;
   text-decoration: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Modal Background */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Modal Box */
+.modal-content {
+  background-color: #005d6e; /* Dark Teal from image */
+  width: 800px;
+  max-width: 90%;
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  color: white;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.modal-image {
+  flex: 1;
+  background: #eee;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal-details {
+  flex: 1.2;
+  padding: 40px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 30px;
+  cursor: pointer;
+  color: #71b9c5;
+}
+
+/* Typography & Content */
+.modal-details h2 { margin-top: 0; font-size: 28px; line-height: 1.2; }
+.detail-group { margin-bottom: 25px; }
+.detail-group label { color: #71b9c5; display: block; font-size: 0.9rem; margin-bottom: 5px; }
+.detail-group p { font-size: 1.2rem; margin: 0; border-bottom: 1px solid rgba(255,255,255,0.2); display: inline-block; }
+
+/* Buttons */
+.modal-actions { margin-top: 40px; display: flex; align-items: center; gap: 20px; }
+.btn-book {
+  background: #00aeb1;
+  border: none;
+  padding: 12px 25px;
+  color: white;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.view-profile { color: white; text-decoration: none; font-size: 0.9rem; }
+
+/* The background overlay */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  align-items: center; /* Centers modal vertically */
+  justify-content: center; /* Centers modal horizontally */
+}
+
+/* The actual box */
+.modal-content {
+  background-color: #005d6e; /* Dark teal color from your image */
+  width: 900px;
+  max-width: 95%;
+  display: flex; /* This puts image and text side-by-side */
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+/* Image container */
+.modal-image {
+  flex: 1; /* Takes up 50% of the space */
+  background: #f0f0f0;
+}
+
+.modal-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the doctor's photo fills the space without stretching */
+  display: block;
+}
+
+/* Text container */
+.modal-details {
+  flex: 1; /* Takes up the other 50% */
+  padding: 50px;
+  color: white;
+  font-family: sans-serif;
+}

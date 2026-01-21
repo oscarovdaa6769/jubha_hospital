@@ -163,7 +163,22 @@
   </div>
 </div>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Place all your code inside here
+  document.querySelectorAll('.doctor-profile').forEach(card => {
+    card.addEventListener('click', () => {
+      const modal = document.getElementById('doctorModal');
+      // ... the rest of your code
+      modal.style.display = 'flex';
+    });
+  });
 
+  document.querySelector('.close-modal').onclick = () => {
+    document.getElementById('doctorModal').style.display = 'none';
+  };
+});
+</script>
 
 
 

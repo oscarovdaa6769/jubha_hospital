@@ -164,7 +164,38 @@
 </div>
 
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Place all your code inside here
+  document.querySelectorAll('.doctor-profile').forEach(card => {
+    card.addEventListener('click', () => {
+      const modal = document.getElementById('doctorModal');
+      // ... the rest of your code
+      modal.style.display = 'flex';
+    });
+  });
 
+  document.querySelector('.close-modal').onclick = () => {
+    document.getElementById('doctorModal').style.display = 'none';
+  };
+});
+
+document.querySelectorAll('.doctor-profile').forEach(card => {
+  card.addEventListener('click', () => {
+    const modal = document.getElementById('doctorModal');
+    
+    // 1. Get the image URL from the clicked card
+    const clickedImgSrc = card.querySelector('/assets/css/images/doctor1.jpg').src;
+
+    // 2. Find the image tag inside the modal and update it
+    const modalImg = document.getElementById('modalImg');
+    modalImg.src = clickedImgSrc;
+
+    // 3. Show the modal
+    modal.style.display = 'flex'; 
+  });
+});
+</script>
 
 
 
